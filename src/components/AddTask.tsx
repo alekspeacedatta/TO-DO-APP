@@ -11,7 +11,7 @@ const AddTask = ({task, setTask, nextId, setId}: Props) => {
 
   const addTask = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    if(!newTaskTitle.trim) return;
+    if(!newTaskTitle.trim()) return;
     setId(nextId + 1);
     const newTask = {
       id: nextId,
